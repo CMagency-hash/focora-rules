@@ -1,26 +1,43 @@
 {
-  "version": 1,
+  "version": 2,
   "minAppVersion": "1.0.0",
   "userAgentSuffix": "Version/26.0 Mobile/15E148 Safari/604.1",
   "allowedHosts": ["instagram.com", "cdninstagram.com", "facebook.com", "fbcdn.net"],
   "tabs": {
     "discussions": "/direct/inbox/",
     "stories": "/",
-    "notifs": "/accounts/activity/"
+    "notifs": "/notifications/"
   },
-  "hideHrefExact": ["/"],
+  "hideHrefExact": [],
   "hideHrefPrefix": ["/explore/", "/reels/"],
   "hideLabels": [
     "Home", "Accueil", "Inicio", "Startseite", "Home page",
     "Reels",
-    "Explore", "Explorer", "Explorar", "Entdecken", "Esplora"
+    "Explore", "Explorer", "Découvrir", "Explorar", "Entdecken", "Esplora"
   ],
-  "hideSelectors": ["a[href$=\"/reels/\"]"],
-  "homeHideSelectors": ["main article", "main div:has(> article)"],
+  "hideSelectors": [
+    "a[href$=\"/reels/\"]:not(:has(img))",
+    "a[href=\"/notifications/\"]",
+    "[role=\"tablist\"] > div:has(> a[href$=\"/reels/\"])",
+    "div:has(> div[tabindex=\"-1\"] a[href=\"/explore/\"])"
+  ],
+  "homeHideSelectors": [
+    "main article",
+    "main div:has(> article)",
+    "main div:has(> div > div > article)",
+    "main div:has(> [role=\"progressbar\"])"
+  ],
   "blockExact": ["/", "/explore", "/explore/", "/reels", "/reels/"],
   "blockPrefix": ["/explore/", "/reels/"],
   "allowPrefix": ["/explore/search/"],
   "reelPrefix": "/reel/",
+  "backLinkSelectors": ["a[href=\"/\"]"],
+  "viewerCloseLabels": ["Fermer", "Close", "Cerrar", "Schließen", "Chiudi", "Fechar"],
+  "accountSwitchSelectors": [
+    "[role=\"navigation\"]:has(a[href=\"/direct/new/\"]) div[role=\"button\"]:has(> div > svg)",
+    "header h1 div[role=\"button\"]:has(svg)"
+  ],
+  "navMarkerSelector": "a[href=\"/explore/\"]",
   "profileLinkSelector": "a:has(img[alt*=\"profil\" i]), a:has(img[alt*=\"profile picture\" i])",
   "unreadEndpoint": "/api/v1/direct_v2/get_badge_count/"
 }
