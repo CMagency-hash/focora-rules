@@ -31,7 +31,7 @@
   "blockPrefix": ["/explore/", "/reels/"],
   "allowPrefix": ["/explore/search/"],
   "reelPrefix": "/reel/",
-  "backLinkSelectors": ["a[href=\"/\"]"],
+  "backLinkSelectors": ["a[href=\"/\"]", "nav header button:has(svg)"],
   "viewerCloseLabels": ["Fermer", "Close", "Cerrar", "Schließen", "Chiudi", "Fechar"],
   "accountSwitchSelectors": [
     "[role=\"navigation\"]:has(a[href=\"/direct/new/\"]) div[role=\"button\"]:has(> div > svg)",
