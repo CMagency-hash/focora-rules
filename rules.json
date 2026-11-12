@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "minAppVersion": "1.0.0",
+  "userAgentSuffix": "Version/26.0 Mobile/15E148 Safari/604.1",
+  "allowedHosts": ["instagram.com", "cdninstagram.com", "facebook.com", "fbcdn.net"],
+  "tabs": {
+    "discussions": "/direct/inbox/",
+    "stories": "/",
+    "notifs": "/accounts/activity/"
+  },
+  "hideHrefExact": ["/"],
+  "hideHrefPrefix": ["/explore/", "/reels/"],
+  "hideLabels": [
+    "Home", "Accueil", "Inicio", "Startseite", "Home page",
+    "Reels",
+    "Explore", "Explorer", "Explorar", "Entdecken", "Esplora"
+  ],
+  "hideSelectors": ["a[href$=\"/reels/\"]"],
+  "homeHideSelectors": ["main article", "main div:has(> article)"],
+  "blockExact": ["/", "/explore", "/explore/", "/reels", "/reels/"],
+  "blockPrefix": ["/explore/", "/reels/"],
+  "allowPrefix": ["/explore/search/"],
+  "reelPrefix": "/reel/",
+  "profileLinkSelector": "a:has(img[alt*=\"profil\" i]), a:has(img[alt*=\"profile picture\" i])",
+  "unreadEndpoint": "/api/v1/direct_v2/get_badge_count/"
+}
